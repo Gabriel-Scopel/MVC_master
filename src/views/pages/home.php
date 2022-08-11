@@ -1,6 +1,8 @@
 <?php $render('header'); ?>
 
-<a href="<?=$base;?>/novo">Novo Usuário</a>
+<a href="<?=$base;?>/novo">Novo Usuário</a> //base se refere a url padrão do sistema 
+//essa rota "/novo" foi criada em routes.php. Lá nós temos o redirecionamento para o controler que possui a classe homecontroller que possui o método add
+
 
 <table border="1" width="100%">
     <tr>
@@ -11,7 +13,7 @@
     </tr>
     <?php foreach ($usuarios as $usuario):?>
         <tr>
-            <td><?=$usuario['id'];?></td>
+            <td><?=$usuario['id'];?></td> //id, nome e email pegos no homecontroller
             <td><?=$usuario['nome'];?></td>
             <td><?=$usuario['email'];?></td>
             <td>Editar

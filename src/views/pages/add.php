@@ -2,7 +2,7 @@
 
 <h2>Adicionar Novo Usuário</h2>
 
-<form method="POST" action="<?=$base;?>/novo">
+<form method="POST" action="<?=$base;?>/novo"> //criando url link tipo post
     <label>
         Nome:<br/>
         <input type="text" name="name"/>

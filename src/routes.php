@@ -3,7 +3,7 @@ use core\Router;
 
 $router = new Router();
 
-$router->get('/', 'HomeController@index');
+$router->get('/', 'HomeController@index'); //homecontroller é o nome da classe do controller e oq vem dps do @ é o método
 $router->get('/novo', 'UsuariosController@add');
 $router->post('/novo', 'UsuariosController@addAction');
 

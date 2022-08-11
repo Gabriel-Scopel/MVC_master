@@ -9,7 +9,7 @@ class HomeController extends Controller {
     public function index() {
         $usuarios = Usuario::select()->execute();
 
-        $this->render('home', [
+        $this->render('home', [  
             'usuarios' => $usuarios
         ]);
     }

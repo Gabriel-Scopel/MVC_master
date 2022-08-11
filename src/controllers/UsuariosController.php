@@ -2,19 +2,19 @@
 namespace src\controllers;
 
 use \core\Controller;
-use \src\models\Usuario;
+use \src\models\Usuario; //controller usuario (dentro de models)
 
 class UsuariosController extends Controller {
 
     public function add(){
-        $this->render('add');
+        $this->render('add');//redicionando para pages\add.php 
     }
     public function addAction(){
         $name = filter_input(INPUT_POST, 'name');
         $email = filter_input(INPUT_POST, 'email');
 
         if($name && $email){
-            $data = Usuario::select()->where('email', $email)->execute();
+            $data = Usuario::select()->where('email', $email)->execute(); //controller usuario
 
             if(count($data) === 0){
                 Usuario::insert([
